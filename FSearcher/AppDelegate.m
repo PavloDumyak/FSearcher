@@ -19,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    FSDownloading *ob = [[FSDownloading alloc] init];
-    [ob downloadDataTask:^(NSData *json)
+   
+   /* [FSDownloading downloadDataTask:0:^(NSData *json)
     {
         NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
                                                              options:0
@@ -42,7 +42,7 @@
         
         
         
-    }];
+    }];*/
     
     return YES;
 }

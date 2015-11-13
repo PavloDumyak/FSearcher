@@ -37,10 +37,7 @@
     [dateFormat setDateFormat:@"yyyy-dd-mm"];
     self.releaseDate= [dateFormat dateFromString:dateStr];
     self.posterPath = [object valueForKey:@"poster_path"];
-    [FSDownloading downloadImage:self.posterPath :^(NSData *image) {
-        self.image = image;
-    }];
-   
+       
     
     
 }

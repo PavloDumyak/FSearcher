@@ -13,7 +13,9 @@
 #define API_KEY @"?api_key=47bee5b57fa5d8d57c9027a0bc5b7204"
 #define TOP_RATED @"3/movie/top_rated"
 
+#define POPULAR @"3/movie/popular"
 
+#define UPCOMING @"3/movie/upcoming"
 #pragma --mark download Image
 #define  IMAGE @"https://image.tmdb.org/t/p/w396"
 

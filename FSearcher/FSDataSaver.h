@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "FSDownloading.h"
+#import "FSFilm.h"
 @interface FSDataSaver : NSObject
-@property (nonatomic, strong) NSArray *films;
+@property (nonatomic, strong) NSMutableArray *films;
 + (instancetype)sharedInstance;
++ (void)updateData:(NSInteger)type;
 @end

@@ -18,10 +18,34 @@
     return [NSURL URLWithString:base];
 }
 
++ (NSURL*)getPopularFilmsURL
+{
+    NSMutableString *base = [NSMutableString stringWithString: SITE_ADDRESS];
+    [base appendString:POPULAR];
+    [base appendString:API_KEY];
+    return [NSURL URLWithString:base];
+}
+
++ (NSURL*)getUpcomingFilmsURL
+{
+    NSMutableString *base = [NSMutableString stringWithString: SITE_ADDRESS];
+    [base appendString:UPCOMING];
+    [base appendString:API_KEY];
+    return [NSURL URLWithString:base];
+}
+
 + (NSURL*)getImage:(NSString *)imagePath
 {
     NSMutableString *base = [NSMutableString stringWithString: IMAGE];
-    [base appendString:imagePath];
+    if([imagePath isEqual:nil])
+    {
+       [base appendString:@"none"];
+    }
+    else
+    {
+       [base appendString:imagePath];
+    }
+
     return [NSURL URLWithString:base];
 }
 

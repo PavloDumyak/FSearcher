@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="soo-eg-EQy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="soo-eg-EQy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -32,8 +32,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gPx-XF-hzc">
+                                <rect key="frame" x="185" y="72" width="230" height="29"/>
+                                <segments>
+                                    <segment title="Top"/>
+                                    <segment title="Popular"/>
+                                    <segment title="Upcoming"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeFilmCategory:" destination="vXZ-lx-hvc" eventType="valueChanged" id="tWf-bs-dTn"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="199" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XUQ-Vd-2oS">
-                                <rect key="frame" x="0.0" y="104" width="600" height="463"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cell" rowHeight="199" id="yZ1-ec-F2I">
@@ -52,14 +63,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XUQ-Vd-2oS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IIE-hb-2Bj"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XUQ-Vd-2oS" secondAttribute="bottom" constant="33" id="xe6-97-k10"/>
-                            <constraint firstAttribute="trailing" secondItem="XUQ-Vd-2oS" secondAttribute="trailing" id="ymP-uk-3gU"/>
-                            <constraint firstItem="XUQ-Vd-2oS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="zw7-9t-mVV"/>
+                            <constraint firstAttribute="trailing" secondItem="XUQ-Vd-2oS" secondAttribute="trailing" id="FqL-mN-Xqb"/>
+                            <constraint firstItem="XUQ-Vd-2oS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MfB-84-caJ"/>
+                            <constraint firstAttribute="centerX" secondItem="gPx-XF-hzc" secondAttribute="centerX" id="TPF-wY-wWG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XUQ-Vd-2oS" secondAttribute="bottom" id="bUY-pD-eNU"/>
+                            <constraint firstItem="gPx-XF-hzc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="nLK-LY-M7A"/>
+                            <constraint firstItem="XUQ-Vd-2oS" firstAttribute="top" secondItem="gPx-XF-hzc" secondAttribute="bottom" constant="8" id="r3a-2r-QWq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vgN-gg-pnj"/>
                     <connections>
+                        <outlet property="segmentedFilmController" destination="gPx-XF-hzc" id="aVn-RJ-8gL"/>
                         <outlet property="tableView" destination="XUQ-Vd-2oS" id="80h-RV-YaQ"/>
                     </connections>
                 </viewController>

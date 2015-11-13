@@ -10,5 +10,7 @@
 #import "FSPathDefines.h"
 @interface FSUrlFetcher : NSObject
 + (NSURL*)getTopRatedFilmsURL;
++ (NSURL*)getPopularFilmsURL;
++ (NSURL*)getUpcomingFilmsURL;
 + (NSURL*)getImage:(NSString*)imagePath;
 @end

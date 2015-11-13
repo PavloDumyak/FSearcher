@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "FSUrlFetcher.h"
+#import "FSFilm.h"
 @interface FSDownloading : NSObject
 
-- (void)downloadDataTask:(void (^)(NSData* json))onCompletition;
++ (void)downloadDataTask:(NSInteger)type :(void (^)(NSData* json))onCompletition;
 + (void)downloadImage:(NSString *)imagePath :(void (^)(NSData* image))onCompletition;
++ (void)downloadImageWithArray:(NSArray*)films :(void (^)(NSData* image))onCompletition;
 @end

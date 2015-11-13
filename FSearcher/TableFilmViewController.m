@@ -18,17 +18,25 @@
     [super viewDidLoad];
     self.dataSaver = [FSDataSaver sharedInstance];
     self.film = [FSFilm alloc];
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(reloadDATA) userInfo:nil repeats:YES];
-                      
-                   
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3
+                                                      target:self
+                                                    selector:@selector(reloadDATA)
+                                                    userInfo:nil repeats:YES];
     [timer fire];
 }
 
+- (IBAction)changeFilmCategory:(id)sender
+{
+
+    [FSDataSaver updateData:self.segmentedFilmController.selectedSegmentIndex];
+}
 
 - (void)reloadDATA
 {
   [self.tableView reloadData];
 }
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return  [self.dataSaver.films count];
@@ -41,7 +49,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     self.film = self.dataSaver.films[indexPath.row];
     cell.textLabel.text = self.film.title;
+    if ([self.film.image isEqual:nil])
+    {
+        cell.imageView.image = [UIImage imageNamed:@"No_Image_Available.png"];
+    }
+    else
+    {
     cell.imageView.image = [UIImage imageWithData:self.film.image];
+    }
     return cell;
 }
 
