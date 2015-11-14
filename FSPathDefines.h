@@ -10,7 +10,8 @@
 #define FSearcher_FSPathDefines_h
 
 #define SITE_ADDRESS @"http://api.themoviedb.org/"
-#define API_KEY @"?api_key=47bee5b57fa5d8d57c9027a0bc5b7204"
+#define PAGE @"?page="
+#define API_KEY @"&&api_key=47bee5b57fa5d8d57c9027a0bc5b7204"
 #define TOP_RATED @"3/movie/top_rated"
 
 #define POPULAR @"3/movie/popular"

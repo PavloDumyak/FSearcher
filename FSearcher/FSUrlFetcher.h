@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "FSPathDefines.h"
 @interface FSUrlFetcher : NSObject
-+ (NSURL*)getTopRatedFilmsURL;
-+ (NSURL*)getPopularFilmsURL;
-+ (NSURL*)getUpcomingFilmsURL;
++ (NSURL*)getTopRatedFilmsURL:(NSInteger)page;
++ (NSURL*)getPopularFilmsURL:(NSInteger)page;
++ (NSURL*)getUpcomingFilmsURL:(NSInteger)page;
 + (NSURL*)getImage:(NSString*)imagePath;
 @end

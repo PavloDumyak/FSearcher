@@ -19,6 +19,7 @@
 		6D21B2F21BF618860004B2B5 /* FSDataSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D21B2F11BF618860004B2B5 /* FSDataSaver.m */; };
 		6D21B2F61BF620BB0004B2B5 /* FSUrlFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */; };
 		848212091BF662D5002E8A75 /* No_Image_Available.png in Resources */ = {isa = PBXBuildFile; fileRef = 848212081BF662D5002E8A75 /* No_Image_Available.png */; };
+		8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482125B1BF6A65D002E8A75 /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		6D21B2F41BF620BB0004B2B5 /* FSUrlFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUrlFetcher.h; sourceTree = "<group>"; };
 		6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUrlFetcher.m; sourceTree = "<group>"; };
 		848212081BF662D5002E8A75 /* No_Image_Available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = No_Image_Available.png; sourceTree = "<group>"; };
+		8482125A1BF6A65D002E8A75 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		8482125B1BF6A65D002E8A75 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 			children = (
 				6D21B2E31BF5FE7B0004B2B5 /* TableFilmViewController.h */,
 				6D21B2E41BF5FE7B0004B2B5 /* TableFilmViewController.m */,
+				8482125A1BF6A65D002E8A75 /* CustomCell.h */,
+				8482125B1BF6A65D002E8A75 /* CustomCell.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			files = (
 				6D21B2F61BF620BB0004B2B5 /* FSUrlFetcher.m in Sources */,
 				6D21B2E91BF608A60004B2B5 /* FSFilm.m in Sources */,
+				8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */,
 				6D21B2C01BF5FD880004B2B5 /* AppDelegate.m in Sources */,
 				6D21B2ED1BF608D70004B2B5 /* FSDownloading.m in Sources */,
 				6D21B2E51BF5FE7B0004B2B5 /* TableFilmViewController.m in Sources */,

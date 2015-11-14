@@ -23,12 +23,15 @@
                                                     selector:@selector(reloadDATA)
                                                     userInfo:nil repeats:YES];
     [timer fire];
+    self.numberOfPage.text = [NSString stringWithFormat:@"%ld/%ld",(long)currentPage,(long)self.dataSaver.totalPages];
+    self.navigationController.navigationBar.topItem.title = @"Films";
 }
 
 - (IBAction)changeFilmCategory:(id)sender
 {
-
-    [FSDataSaver updateData:self.segmentedFilmController.selectedSegmentIndex];
+    currentPage = 1;
+    [FSDataSaver updateData:self.segmentedFilmController.selectedSegmentIndex :currentPage];
+    self.numberOfPage.text = [NSString stringWithFormat:@"%ld/%ld",(long)currentPage,(long)self.dataSaver.totalPages];
 }
 
 - (void)reloadDATA
@@ -36,6 +39,23 @@
   [self.tableView reloadData];
 }
 
+- (IBAction)prevPage:(id)sender
+{ if(currentPage > 1)
+    {
+        currentPage--;
+        [FSDataSaver updateData:self.segmentedFilmController.selectedSegmentIndex :currentPage];
+        self.numberOfPage.text = [NSString stringWithFormat:@"%ld/%ld",(long)currentPage,(long)self.dataSaver.totalPages];
+    }
+}
+- (IBAction)nextPage:(id)sender
+{
+    if(currentPage < self.dataSaver.totalPages)
+    {
+        currentPage++;
+        [FSDataSaver updateData:self.segmentedFilmController.selectedSegmentIndex :currentPage];
+        self.numberOfPage.text = [NSString stringWithFormat:@"%ld/%ld",(long)currentPage,(long)self.dataSaver.totalPages];
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -46,18 +66,30 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    static NSString *cellIdentifier = @"cell";
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     self.film = self.dataSaver.films[indexPath.row];
-    cell.textLabel.text = self.film.title;
+    cell.customTitle.text = self.film.title;
+    NSMutableString *popularity = [NSMutableString stringWithString:@"Rating:"];
+    [popularity appendString:[NSString stringWithFormat:@"%.1f", self.film.vote_average]];
+    cell.customRated.text = popularity;
+    
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy"];
+    NSString *stringFromDate = [formatter stringFromDate:self.film.releaseDate];
+    cell.customDateRelease.text = stringFromDate;
     if ([self.film.image isEqual:nil])
     {
-        cell.imageView.image = [UIImage imageNamed:@"No_Image_Available.png"];
+        cell.customImageView.image = [UIImage imageNamed:@"No_Image_Available.png"];
     }
     else
     {
-    cell.imageView.image = [UIImage imageWithData:self.film.image];
+    cell.customImageView.image = [UIImage imageWithData:self.film.image];
     }
     return cell;
+    
 }
 
 

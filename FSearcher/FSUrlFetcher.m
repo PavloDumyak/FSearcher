@@ -10,26 +10,32 @@
 
 @implementation FSUrlFetcher
 
-+ (NSURL*)getTopRatedFilmsURL
++ (NSURL*)getTopRatedFilmsURL:(NSInteger)page
 {
     NSMutableString *base = [NSMutableString stringWithString: SITE_ADDRESS];
     [base appendString:TOP_RATED];
+    [base appendString:PAGE];
+    [base appendString:[NSString stringWithFormat:@"%lu",page]];
     [base appendString:API_KEY];
     return [NSURL URLWithString:base];
 }
 
-+ (NSURL*)getPopularFilmsURL
++ (NSURL*)getPopularFilmsURL:(NSInteger)page
 {
     NSMutableString *base = [NSMutableString stringWithString: SITE_ADDRESS];
     [base appendString:POPULAR];
+    [base appendString:PAGE];
+    [base appendString:[NSString stringWithFormat:@"%lu",page]];
     [base appendString:API_KEY];
     return [NSURL URLWithString:base];
 }
 
-+ (NSURL*)getUpcomingFilmsURL
++ (NSURL*)getUpcomingFilmsURL:(NSInteger)page
 {
     NSMutableString *base = [NSMutableString stringWithString: SITE_ADDRESS];
     [base appendString:UPCOMING];
+    [base appendString:PAGE];
+    [base appendString:[NSString stringWithFormat:@"%lu",page]];
     [base appendString:API_KEY];
     return [NSURL URLWithString:base];
 }

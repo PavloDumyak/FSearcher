@@ -19,7 +19,7 @@
 @property (nonatomic, strong) NSString *posterPath;
 @property (nonatomic, assign) float popularity;
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, assign) NSInteger vote_average;
+@property (nonatomic, assign) float vote_average;
 @property (nonatomic, assign) NSInteger voteCount;
 @property (nonatomic, strong) NSData *image;
 

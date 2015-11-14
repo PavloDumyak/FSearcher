@@ -18,16 +18,16 @@
     return object;
 }
 
-+ (void)updateData:(NSInteger)type
++ (void)updateData:(NSInteger)type :(NSInteger)page
 {
     
-    [FSDownloading downloadDataTask:type :^(NSData *json) {
+    [FSDownloading downloadDataTask:type :page :^(NSData *json) {
         NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
                                                              options:0
                                                                error:nil];
         
         NSArray *arrayOfData= [JSON valueForKey:@"results"];
-        
+        NSInteger totalPages = [[JSON valueForKey:@"total_pages"] integerValue];
         FSDataSaver *dataSaver = [FSDataSaver sharedInstance];
         NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:100];
         for (id obj in arrayOfData)
@@ -36,11 +36,9 @@
             [mutableArray addObject:[film init:obj]];
         }
         
-       [FSDownloading downloadImageWithArray:mutableArray :^(NSData *image) {
-           
-       }];
         
         [dataSaver setFilms:mutableArray];
+        [dataSaver setTotalPages:totalPages];
          
     
     }];

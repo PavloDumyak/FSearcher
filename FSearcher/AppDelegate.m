@@ -19,30 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-   
-   /* [FSDownloading downloadDataTask:0:^(NSData *json)
-    {
-        NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
-                                                             options:0
-                                                               error:nil];
-
-        NSArray *arrayOfData= [JSON valueForKey:@"results"];
-        
-        
-
-        FSDataSaver *dataSaver = [FSDataSaver sharedInstance];
-        NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:100];
-        for (id obj in arrayOfData)
-        {
-           FSFilm *film = [[FSFilm alloc] init];
-          [mutableArray addObject:[film init:obj]];
-        }
-        
-        [dataSaver setFilms:mutableArray];
-        
-        
-        
-    }];*/
+    [FSDataSaver updateData:0 :1];
     
     return YES;
 }

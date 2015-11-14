@@ -11,6 +11,7 @@
 #import "FSFilm.h"
 @interface FSDataSaver : NSObject
 @property (nonatomic, strong) NSMutableArray *films;
+@property (nonatomic, assign) NSInteger totalPages;
 + (instancetype)sharedInstance;
-+ (void)updateData:(NSInteger)type;
++ (void)updateData:(NSInteger)type :(NSInteger)page;
 @end
