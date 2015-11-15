@@ -12,4 +12,5 @@
 @interface FSDownloading : NSObject
 + (void)downloadDataTask:(NSInteger)type :(NSInteger)page :(void (^)(NSData* json))onCompletition;
 + (void)downloadImage:(NSString *)imagePath :(void (^)(NSData* image))onCompletition;
++ (void)downloadPosterPathes:(NSInteger)filmID  :(void (^)(NSData* json))onCompletition;
 @end

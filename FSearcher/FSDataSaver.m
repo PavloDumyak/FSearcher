@@ -42,6 +42,38 @@
          
     
     }];
+}
+
++ (void)getAllImageForCollection: (NSInteger)filmID
+{
+    
+    [FSDownloading downloadPosterPathes:filmID :^(NSData *json) {
+        NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
+                                                             options:0
+                                                               error:nil];
+        
+        NSArray *arrayOfData= [JSON valueForKey:@"posters"];
+        NSMutableArray *dataPosters = [NSMutableArray array];
+        for (id ob in arrayOfData)
+        {
+            [dataPosters addObject:[ob valueForKey:@"file_path"]];
+        }
+         FSDataSaver *dataSaver = [FSDataSaver sharedInstance];
+        [dataSaver setAllPostersPath:dataPosters];
+        
+        NSMutableArray *arr = [NSMutableArray array];
+        for (int i = 0;i<5;i++) {
+            [FSDownloading downloadImage:dataPosters[i] :^(NSData *image) {
+                [arr addObject:image];
+                [dataSaver setImageData:arr];
+            }];
+        }
+        
+    }];
     
 }
+
+
+
+
 @end

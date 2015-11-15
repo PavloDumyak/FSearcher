@@ -53,6 +53,31 @@
 }
 
 
++ (void)downloadPosterPathes:(NSInteger)filmID  :(void (^)(NSData* json))onCompletition
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[FSUrlFetcher getImagesPath:filmID]];
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      
+                                      if (error) {
+                                          
+                                          return;
+                                      }
+                                      
+                                      if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+                                          NSLog(@"Response HTTP Status code: %ld\n", (long)[(NSHTTPURLResponse *)response statusCode]);
+                                          NSLog(@"Response HTTP Headers:\n%@\n", [(NSHTTPURLResponse *)response allHeaderFields]);
+                                      }
+                                      
+                                      onCompletition(data);
+                                  }];
+    [task resume];
+}
+
 
 
 

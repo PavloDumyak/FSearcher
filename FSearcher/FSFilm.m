@@ -24,6 +24,7 @@
 
 -(void)parsing:(NSDictionary*)object
 {
+    self.ID = [[object valueForKey:@"id"] integerValue];
     self.title = [object valueForKey:@"title"];
     self.overview = [object valueForKey:@"overview"];
     self.adult = [object valueForKey:@"adult"];

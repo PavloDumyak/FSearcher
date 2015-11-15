@@ -21,4 +21,5 @@ static NSInteger currentPage = 1;
 @property (nonatomic, strong) NSArray *currentFilms;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedFilmController;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfPage;
+@property (weak, nonatomic) IBOutlet UIButton *showDetailButton;
 @end

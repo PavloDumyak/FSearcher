@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *customImageView;
 @property (weak, nonatomic) IBOutlet UILabel *customRated;
 @property (weak, nonatomic) IBOutlet UILabel *customDateRelease;
+@property (weak, nonatomic) IBOutlet UIButton *showDetailButton;
 @end

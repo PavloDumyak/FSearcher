@@ -13,4 +13,6 @@
 + (NSURL*)getPopularFilmsURL:(NSInteger)page;
 + (NSURL*)getUpcomingFilmsURL:(NSInteger)page;
 + (NSURL*)getImage:(NSString*)imagePath;
++ (NSURL*)getImagesPath:(NSInteger)filmID;
+
 @end

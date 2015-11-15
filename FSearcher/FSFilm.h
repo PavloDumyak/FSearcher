@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FSDownloading.h"
+#import "FSDataSaver.h"
 @interface FSFilm : NSObject
 
 @property (nonatomic, assign) BOOL adult;
@@ -23,6 +24,7 @@
 @property (nonatomic, assign) NSInteger voteCount;
 @property (nonatomic, strong) NSData *image;
 
+@property (nonatomic, strong)NSMutableArray* posterImage;
 
 -(FSFilm*)init:(NSDictionary*)object;
 -(void)parsing:(NSDictionary*)object;

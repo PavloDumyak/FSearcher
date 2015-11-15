@@ -55,4 +55,16 @@
     return [NSURL URLWithString:base];
 }
 
++ (NSURL*)getImagesPath:(NSInteger)filmID
+{
+    NSMutableString *base = [NSMutableString stringWithString: SITE_ADDRESS];
+    [base appendString:GET_IMAGE_PATH];
+    NSString *ID = [NSString stringWithFormat:@"%ld",(long)filmID];
+    [base appendString:ID];
+    [base appendString:IM];
+    [base appendString:API_KEY_FOR_IM];
+    return [NSURL URLWithString:base];
+}
+
+
 @end

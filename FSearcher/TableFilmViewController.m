@@ -7,7 +7,7 @@
 //
 
 #import "TableFilmViewController.h"
-
+#import "FSShowDetailViewController.h"
 @interface TableFilmViewController ()
 
 @end
@@ -69,6 +69,7 @@
     
     static NSString *cellIdentifier = @"cell";
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    cell.showDetailButton.tag = indexPath.row;
     self.film = self.dataSaver.films[indexPath.row];
     cell.customTitle.text = self.film.title;
     NSMutableString *popularity = [NSMutableString stringWithString:@"Rating:"];
@@ -93,19 +94,36 @@
 }
 
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
+
+
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if([identifier isEqualToString:@"ShowDetail"])
+    {
+        return YES;
+    }
+    return NO;
+}
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    FSFilm *film = self.dataSaver.films[[sender tag]];
+    [FSDataSaver getAllImageForCollection:film.ID];
+    FSShowDetailViewController *showDetail = [segue destinationViewController];
+    [showDetail setFilmDetail:self.dataSaver.films[[sender tag]]];
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

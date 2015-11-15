@@ -20,6 +20,8 @@
 		6D21B2F61BF620BB0004B2B5 /* FSUrlFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */; };
 		848212091BF662D5002E8A75 /* No_Image_Available.png in Resources */ = {isa = PBXBuildFile; fileRef = 848212081BF662D5002E8A75 /* No_Image_Available.png */; };
 		8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482125B1BF6A65D002E8A75 /* CustomCell.m */; };
+		84F0DF2B1BF8D27000A9249E /* FSShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DF2A1BF8D27000A9249E /* FSShowDetailViewController.m */; };
+		84F0DF2E1BF8F22D00A9249E /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DF2D1BF8F22D00A9249E /* CustomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		848212081BF662D5002E8A75 /* No_Image_Available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = No_Image_Available.png; sourceTree = "<group>"; };
 		8482125A1BF6A65D002E8A75 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		8482125B1BF6A65D002E8A75 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		84F0DF291BF8D27000A9249E /* FSShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShowDetailViewController.h; sourceTree = "<group>"; };
+		84F0DF2A1BF8D27000A9249E /* FSShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShowDetailViewController.m; sourceTree = "<group>"; };
+		84F0DF2C1BF8F22D00A9249E /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		84F0DF2D1BF8F22D00A9249E /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,10 +158,8 @@
 		6D21B2E21BF5FDFC0004B2B5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6D21B2E31BF5FE7B0004B2B5 /* TableFilmViewController.h */,
-				6D21B2E41BF5FE7B0004B2B5 /* TableFilmViewController.m */,
-				8482125A1BF6A65D002E8A75 /* CustomCell.h */,
-				8482125B1BF6A65D002E8A75 /* CustomCell.m */,
+				84F0DF281BF8D25000A9249E /* ShowDetailController */,
+				84F0DF271BF8D22800A9249E /* TableController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +199,28 @@
 				6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */,
 			);
 			name = FSUrlFetcher;
+			sourceTree = "<group>";
+		};
+		84F0DF271BF8D22800A9249E /* TableController */ = {
+			isa = PBXGroup;
+			children = (
+				6D21B2E31BF5FE7B0004B2B5 /* TableFilmViewController.h */,
+				6D21B2E41BF5FE7B0004B2B5 /* TableFilmViewController.m */,
+				8482125A1BF6A65D002E8A75 /* CustomCell.h */,
+				8482125B1BF6A65D002E8A75 /* CustomCell.m */,
+			);
+			name = TableController;
+			sourceTree = "<group>";
+		};
+		84F0DF281BF8D25000A9249E /* ShowDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				84F0DF291BF8D27000A9249E /* FSShowDetailViewController.h */,
+				84F0DF2A1BF8D27000A9249E /* FSShowDetailViewController.m */,
+				84F0DF2C1BF8F22D00A9249E /* CustomCollectionViewCell.h */,
+				84F0DF2D1BF8F22D00A9249E /* CustomCollectionViewCell.m */,
+			);
+			name = ShowDetailController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D21B2F61BF620BB0004B2B5 /* FSUrlFetcher.m in Sources */,
+				84F0DF2B1BF8D27000A9249E /* FSShowDetailViewController.m in Sources */,
 				6D21B2E91BF608A60004B2B5 /* FSFilm.m in Sources */,
 				8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */,
 				6D21B2C01BF5FD880004B2B5 /* AppDelegate.m in Sources */,
@@ -306,6 +333,7 @@
 				6D21B2E51BF5FE7B0004B2B5 /* TableFilmViewController.m in Sources */,
 				6D21B2F21BF618860004B2B5 /* FSDataSaver.m in Sources */,
 				6D21B2BD1BF5FD880004B2B5 /* main.m in Sources */,
+				84F0DF2E1BF8F22D00A9249E /* CustomCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
