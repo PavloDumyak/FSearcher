@@ -10,6 +10,7 @@
 #import "FSFilm.h"
 #import "CustomCollectionViewCell.h"
 #import "FSDataSaver.h"
+#import "ShowPhotoViewController.h"
 @interface FSShowDetailViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (nonatomic, strong)FSDataSaver *dataSaver;
@@ -20,6 +21,6 @@
 @property (nonatomic, strong) NSMutableString *completeTitle;
 @property (weak, nonatomic) IBOutlet UICollectionView *colectionView;
 @property (weak, nonatomic) IBOutlet UITextView *filmOverview;
-
+@property (nonatomic, assign) NSInteger indexRow;
 @property (nonatomic, strong) NSArray *posters;
 @end

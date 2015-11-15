@@ -85,15 +85,28 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    return NO;
+}
 
-/*
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self setIndexRow:indexPath.row];
+    [self performSegueWithIdentifier:@"photoView" sender:self];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    ShowPhotoViewController *photoController = [segue destinationViewController];
+    [photoController setImage: self.dataSaver.ImageData[self.indexRow]];
+    NSLog(@"%ld",(long)self.indexRow);
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

@@ -22,6 +22,7 @@
 		8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482125B1BF6A65D002E8A75 /* CustomCell.m */; };
 		84F0DF2B1BF8D27000A9249E /* FSShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DF2A1BF8D27000A9249E /* FSShowDetailViewController.m */; };
 		84F0DF2E1BF8F22D00A9249E /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DF2D1BF8F22D00A9249E /* CustomCollectionViewCell.m */; };
+		84F0DF311BF90CFE00A9249E /* ShowPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DF301BF90CFE00A9249E /* ShowPhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		84F0DF2A1BF8D27000A9249E /* FSShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShowDetailViewController.m; sourceTree = "<group>"; };
 		84F0DF2C1BF8F22D00A9249E /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		84F0DF2D1BF8F22D00A9249E /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		84F0DF2F1BF90CFE00A9249E /* ShowPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPhotoViewController.h; sourceTree = "<group>"; };
+		84F0DF301BF90CFE00A9249E /* ShowPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +222,8 @@
 				84F0DF2A1BF8D27000A9249E /* FSShowDetailViewController.m */,
 				84F0DF2C1BF8F22D00A9249E /* CustomCollectionViewCell.h */,
 				84F0DF2D1BF8F22D00A9249E /* CustomCollectionViewCell.m */,
+				84F0DF2F1BF90CFE00A9249E /* ShowPhotoViewController.h */,
+				84F0DF301BF90CFE00A9249E /* ShowPhotoViewController.m */,
 			);
 			name = ShowDetailController;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				6D21B2C01BF5FD880004B2B5 /* AppDelegate.m in Sources */,
 				6D21B2ED1BF608D70004B2B5 /* FSDownloading.m in Sources */,
 				6D21B2E51BF5FE7B0004B2B5 /* TableFilmViewController.m in Sources */,
+				84F0DF311BF90CFE00A9249E /* ShowPhotoViewController.m in Sources */,
 				6D21B2F21BF618860004B2B5 /* FSDataSaver.m in Sources */,
 				6D21B2BD1BF5FD880004B2B5 /* main.m in Sources */,
 				84F0DF2E1BF8F22D00A9249E /* CustomCollectionViewCell.m in Sources */,

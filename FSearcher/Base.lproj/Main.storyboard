@@ -312,6 +312,7 @@
                                                 </variation>
                                                 <connections>
                                                     <outlet property="photoView" destination="jt8-cH-f3y" id="Vhm-Wu-iTQ"/>
+                                                    <segue destination="0hM-Sd-klD" kind="show" identifier="photoView" id="XAX-0X-cWH"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -400,7 +401,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mA4-gp-51o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811.5" y="288"/>
+            <point key="canvasLocation" x="643" y="420"/>
+        </scene>
+        <!--Show Photo View Controller-->
+        <scene sceneID="8ZH-bj-zHA">
+            <objects>
+                <viewController id="0hM-Sd-klD" customClass="ShowPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UOp-3c-8CJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="XS9-tZ-uvV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WyS-88-cMX">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q0e-rl-t0u">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Q0e-rl-t0u" secondAttribute="trailing" id="5Wm-mg-5uE"/>
+                            <constraint firstItem="XS9-tZ-uvV" firstAttribute="top" secondItem="Q0e-rl-t0u" secondAttribute="bottom" id="Liw-te-usS"/>
+                            <constraint firstItem="Q0e-rl-t0u" firstAttribute="top" secondItem="UOp-3c-8CJ" secondAttribute="bottom" id="c9H-99-AJm"/>
+                            <constraint firstItem="Q0e-rl-t0u" firstAttribute="leading" secondItem="WyS-88-cMX" secondAttribute="leading" id="pp2-Yv-Ma4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Q0e-rl-t0u"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5Wm-mg-5uE"/>
+                                <exclude reference="c9H-99-AJm"/>
+                                <exclude reference="pp2-Yv-Ma4"/>
+                                <exclude reference="Liw-te-usS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Q0e-rl-t0u"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5Wm-mg-5uE"/>
+                                <include reference="c9H-99-AJm"/>
+                                <include reference="pp2-Yv-Ma4"/>
+                                <include reference="Liw-te-usS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="photoView" destination="Q0e-rl-t0u" id="ZlS-pU-yLy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uB5-j0-9XH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="315"/>
         </scene>
     </scenes>
 </document>
