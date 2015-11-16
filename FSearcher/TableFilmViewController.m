@@ -31,10 +31,7 @@
     self.navigationController.navigationBar.topItem.title = @"Films";
     
 }
-- (IBAction)backToMenu:(id)sender
-{
-   
-}
+
 
 - (IBAction)changeFilmCategory:(id)sender
 {

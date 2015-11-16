@@ -26,6 +26,7 @@
 		84F0DFAA1BF94C7900A9249E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DFA91BF94C7900A9249E /* SWRevealViewController.m */; };
 		84F0DFAD1BF94D1800A9249E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DFAC1BF94D1800A9249E /* RootViewController.m */; };
 		84F0DFB31BF962D000A9249E /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DFB21BF962D000A9249E /* MenuTableViewController.m */; };
+		84F0DFB91BF974DB00A9249E /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DFB81BF974DB00A9249E /* SearchController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		84F0DFAC1BF94D1800A9249E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
 		84F0DFB11BF962D000A9249E /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewController.h; path = ../MenuTableViewController.h; sourceTree = "<group>"; };
 		84F0DFB21BF962D000A9249E /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ../MenuTableViewController.m; sourceTree = "<group>"; };
+		84F0DFB71BF974DB00A9249E /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		84F0DFB81BF974DB00A9249E /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +173,9 @@
 		6D21B2E21BF5FDFC0004B2B5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				84F0DFB51BF96F7800A9249E /* MenuController */,
+				84F0DFB61BF974B000A9249E /* SearchController */,
 				84F0DFB41BF96F5A00A9249E /* SWRevealViewController */,
+				84F0DFB51BF96F7800A9249E /* MenuController */,
 				84F0DF281BF8D25000A9249E /* ShowDetailController */,
 				84F0DF271BF8D22800A9249E /* TableController */,
 			);
@@ -258,6 +262,15 @@
 				84F0DFB21BF962D000A9249E /* MenuTableViewController.m */,
 			);
 			name = MenuController;
+			sourceTree = "<group>";
+		};
+		84F0DFB61BF974B000A9249E /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				84F0DFB71BF974DB00A9249E /* SearchController.h */,
+				84F0DFB81BF974DB00A9249E /* SearchController.m */,
+			);
+			name = SearchController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +383,7 @@
 				6D21B2E51BF5FE7B0004B2B5 /* TableFilmViewController.m in Sources */,
 				84F0DF311BF90CFE00A9249E /* ShowPhotoViewController.m in Sources */,
 				6D21B2F21BF618860004B2B5 /* FSDataSaver.m in Sources */,
+				84F0DFB91BF974DB00A9249E /* SearchController.m in Sources */,
 				6D21B2BD1BF5FD880004B2B5 /* main.m in Sources */,
 				84F0DFAD1BF94D1800A9249E /* RootViewController.m in Sources */,
 				84F0DF2E1BF8F22D00A9249E /* CustomCollectionViewCell.m in Sources */,

@@ -97,6 +97,9 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vrC-86-zQS" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="iB4-DA-mxq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -139,6 +142,124 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVS-t1-CGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1354.5" y="-172.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f1B-Uo-LHQ">
+            <objects>
+                <navigationController id="vrC-86-zQS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sW1-r1-M27">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="b00-et-OgP" kind="relationship" relationship="rootViewController" id="VLI-jy-Pm2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9p1-ol-Mi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-577.5" y="-504.75"/>
+        </scene>
+        <!--Search Controller-->
+        <scene sceneID="bUX-PA-iBt">
+            <objects>
+                <viewController id="b00-et-OgP" customClass="SearchController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gob-vN-6nz"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Vp-Md-chE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EPi-Ni-rKW">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-WQ-MOD">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XWC-wb-IJ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XWC-wb-IJ6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XWC-wb-IJ6"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-7S-BcB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.75734656469999995" green="1" blue="0.74008584470000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lyg-oa-3ZV"/>
+                                    <constraint firstAttribute="width" constant="54" id="Zeo-Ly-mMl"/>
+                                </constraints>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lyg-oa-3ZV"/>
+                                        <exclude reference="Zeo-Ly-mMl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Lyg-oa-3ZV"/>
+                                        <include reference="Zeo-Ly-mMl"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="searchFilms:" destination="b00-et-OgP" eventType="touchUpInside" id="yTI-b1-8lW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Zd-WQ-MOD" secondAttribute="trailing" id="7sl-bz-zNa"/>
+                            <constraint firstAttribute="trailing" secondItem="xN5-7S-BcB" secondAttribute="trailing" constant="16" id="Ksc-SL-kli"/>
+                            <constraint firstItem="8Zd-WQ-MOD" firstAttribute="leading" secondItem="EPi-Ni-rKW" secondAttribute="leading" id="Kvd-Lh-nHF"/>
+                            <constraint firstItem="8Zd-WQ-MOD" firstAttribute="top" secondItem="Gob-vN-6nz" secondAttribute="bottom" constant="8" id="TKq-vV-xeX"/>
+                            <constraint firstItem="xN5-7S-BcB" firstAttribute="top" secondItem="Gob-vN-6nz" secondAttribute="bottom" constant="8" id="t7H-Wa-bdG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8Zd-WQ-MOD"/>
+                                <exclude reference="xN5-7S-BcB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7sl-bz-zNa"/>
+                                <exclude reference="Kvd-Lh-nHF"/>
+                                <exclude reference="TKq-vV-xeX"/>
+                                <exclude reference="Ksc-SL-kli"/>
+                                <exclude reference="t7H-Wa-bdG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8Zd-WQ-MOD"/>
+                                <include reference="xN5-7S-BcB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7sl-bz-zNa"/>
+                                <include reference="Kvd-Lh-nHF"/>
+                                <include reference="TKq-vV-xeX"/>
+                                <include reference="Ksc-SL-kli"/>
+                                <include reference="t7H-Wa-bdG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="t1N-eR-XOQ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="buttonSearch" destination="xN5-7S-BcB" id="EX0-Vc-LJR"/>
+                        <outlet property="inputRequest" destination="8Zd-WQ-MOD" id="JtA-AH-5UD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2eh-9j-ZWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="-528.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SxV-5D-Qb5">
