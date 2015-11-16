@@ -66,5 +66,19 @@
     return [NSURL URLWithString:base];
 }
 
++ (NSURL*)searchingURL:(NSString*)query
+{
+    NSMutableString *base = [NSMutableString stringWithString: SITE_ADDRESS];
+    [base appendString:SEARCH_PATH_BEGIN];
+    [base appendString:query];
+    [base appendString:API_KEY];
+    NSString *encodedString = [base stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *myURL = [[NSURL alloc] initWithString:encodedString];
+    return myURL;
+    
+    
+}
+
+
 
 @end

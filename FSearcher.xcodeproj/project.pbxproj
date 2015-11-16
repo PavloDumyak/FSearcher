@@ -18,6 +18,7 @@
 		6D21B2ED1BF608D70004B2B5 /* FSDownloading.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D21B2EC1BF608D70004B2B5 /* FSDownloading.m */; };
 		6D21B2F21BF618860004B2B5 /* FSDataSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D21B2F11BF618860004B2B5 /* FSDataSaver.m */; };
 		6D21B2F61BF620BB0004B2B5 /* FSUrlFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */; };
+		6D6B09371BF9EE4D006FB90C /* FSSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6B09361BF9EE4D006FB90C /* FSSearching.m */; };
 		848212091BF662D5002E8A75 /* No_Image_Available.png in Resources */ = {isa = PBXBuildFile; fileRef = 848212081BF662D5002E8A75 /* No_Image_Available.png */; };
 		8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482125B1BF6A65D002E8A75 /* CustomCell.m */; };
 		84F0DF2B1BF8D27000A9249E /* FSShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DF2A1BF8D27000A9249E /* FSShowDetailViewController.m */; };
@@ -62,6 +63,8 @@
 		6D21B2F11BF618860004B2B5 /* FSDataSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDataSaver.m; sourceTree = "<group>"; };
 		6D21B2F41BF620BB0004B2B5 /* FSUrlFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUrlFetcher.h; sourceTree = "<group>"; };
 		6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUrlFetcher.m; sourceTree = "<group>"; };
+		6D6B09351BF9EE4D006FB90C /* FSSearching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearching.h; sourceTree = "<group>"; };
+		6D6B09361BF9EE4D006FB90C /* FSSearching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearching.m; sourceTree = "<group>"; };
 		848212081BF662D5002E8A75 /* No_Image_Available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = No_Image_Available.png; sourceTree = "<group>"; };
 		8482125A1BF6A65D002E8A75 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		8482125B1BF6A65D002E8A75 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		6D21B2E01BF5FDC60004B2B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6D6B09381BF9EE51006FB90C /* FSSearching */,
 				6D21B2F31BF6209D0004B2B5 /* FSUrlFetcher */,
 				6D21B2EF1BF618700004B2B5 /* FSDataSaver */,
 				6D21B2EA1BF608B30004B2B5 /* FSDownloading */,
@@ -217,6 +221,15 @@
 				6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */,
 			);
 			name = FSUrlFetcher;
+			sourceTree = "<group>";
+		};
+		6D6B09381BF9EE51006FB90C /* FSSearching */ = {
+			isa = PBXGroup;
+			children = (
+				6D6B09351BF9EE4D006FB90C /* FSSearching.h */,
+				6D6B09361BF9EE4D006FB90C /* FSSearching.m */,
+			);
+			name = FSSearching;
 			sourceTree = "<group>";
 		};
 		84F0DF271BF8D22800A9249E /* TableController */ = {
@@ -379,6 +392,7 @@
 				6D21B2E91BF608A60004B2B5 /* FSFilm.m in Sources */,
 				8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */,
 				6D21B2C01BF5FD880004B2B5 /* AppDelegate.m in Sources */,
+				6D6B09371BF9EE4D006FB90C /* FSSearching.m in Sources */,
 				6D21B2ED1BF608D70004B2B5 /* FSDownloading.m in Sources */,
 				6D21B2E51BF5FE7B0004B2B5 /* TableFilmViewController.m in Sources */,
 				84F0DF311BF90CFE00A9249E /* ShowPhotoViewController.m in Sources */,

@@ -24,7 +24,13 @@
 #pragma --mark download Image
 #define  IMAGE @"https://image.tmdb.org/t/p/w396"
 
+//http:
+//api.themoviedb.org/3/search/movie?query=fight&&api_key=47bee5b57fa5d8d57c9027a0bc5b7204
 
- 
+
+#pragma mark --searching
+
+
+#define SEARCH_PATH_BEGIN @"3/search/movie?query="
 
 #endif

@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
-@interface SearchController : UIViewController<SWRevealViewControllerDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *inputRequest;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSearch;
+#import "FSDataSaver.h"
+#import "CustomCell.h"
+#import "FSFilm.h"
+#import "FSShowDetailViewController.h"
+@interface SearchController : UIViewController<SWRevealViewControllerDelegate, UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *textInput;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
+@property (nonatomic, strong) FSDataSaver* dataSaver;
+@property (nonatomic, strong) FSFilm *film;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

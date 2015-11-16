@@ -13,7 +13,6 @@
 #import "CustomCell.h"
 #import "SWRevealViewController.h"
 static NSInteger currentPage = 1;
-
 @interface TableFilmViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,SWRevealViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FSDataSaver *dataSaver;

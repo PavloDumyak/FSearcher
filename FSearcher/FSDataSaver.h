@@ -14,11 +14,12 @@
 
 @interface FSDataSaver : NSObject
 @property (nonatomic, strong) NSMutableArray *films;
+@property (nonatomic, strong) NSArray *searchingFilms;
 @property (nonatomic, assign) NSInteger totalPages;
 @property (nonatomic, strong) NSArray *allPostersPath;
 @property (nonatomic, strong) NSArray *ImageData;
 + (instancetype)sharedInstance;
 + (void)updateData:(NSInteger)type :(NSInteger)page;
 + (void)getAllImageForCollection: (NSInteger)filmID;
-
++ (void)getSearchingData:(NSString*)query;
 @end

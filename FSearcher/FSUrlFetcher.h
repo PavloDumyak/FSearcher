@@ -14,5 +14,6 @@
 + (NSURL*)getUpcomingFilmsURL:(NSInteger)page;
 + (NSURL*)getImage:(NSString*)imagePath;
 + (NSURL*)getImagesPath:(NSInteger)filmID;
++ (NSURL*)searchingURL:(NSString*)query;
 
 @end

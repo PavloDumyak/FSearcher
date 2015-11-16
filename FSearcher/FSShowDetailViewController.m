@@ -21,10 +21,9 @@
     self.dataSaver = [FSDataSaver sharedInstance];
     [self makeCompleteTitle];
     [self loadSheet];
-   
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCollection) userInfo:nil repeats:YES];
-    
 }
+
 
 - (void)loadSheet
 {
@@ -40,11 +39,8 @@
 }
 
 
-
-
 - (void)updateCollection
 {
-    
     [self.colectionView reloadData];
 }
 
@@ -77,14 +73,13 @@
     [self.completeTitle appendString:@"\nAdult content: NO"];
     [self.completeTitle appendString:@"\nOriginal languge:"];
     [self.completeTitle appendString:self.filmDetail.originalLanguge];
-    
-    
-   
 }
-- (void)didReceiveMemoryWarning {
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     return NO;
@@ -98,14 +93,10 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     ShowPhotoViewController *photoController = [segue destinationViewController];
     [photoController setImage: self.dataSaver.ImageData[self.indexRow]];
-    NSLog(@"%ld",(long)self.indexRow);
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 
