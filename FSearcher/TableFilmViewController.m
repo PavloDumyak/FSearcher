@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.revealViewController.delegate = self;
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.tableView addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
     self.dataSaver = [FSDataSaver sharedInstance];
     self.film = [FSFilm alloc];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3
@@ -25,6 +29,11 @@
     [timer fire];
     self.numberOfPage.text = [NSString stringWithFormat:@"%ld/%ld",(long)currentPage,(long)self.dataSaver.totalPages];
     self.navigationController.navigationBar.topItem.title = @"Films";
+    
+}
+- (IBAction)backToMenu:(id)sender
+{
+   
 }
 
 - (IBAction)changeFilmCategory:(id)sender

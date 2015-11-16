@@ -62,7 +62,7 @@
         [dataSaver setAllPostersPath:dataPosters];
         
         NSMutableArray *arr = [NSMutableArray array];
-        for (int i = 0;i<5;i++) {
+        for (int i = 0;i<dataPosters.count/3;i++) {
             [FSDownloading downloadImage:dataPosters[i] :^(NSData *image) {
                 [arr addObject:image];
                 [dataSaver setImageData:arr];
