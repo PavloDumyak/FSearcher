@@ -38,6 +38,13 @@
     self.filmOverview.text = self.filmDetail.overview;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    
+    FSDataSaver *data = [FSDataSaver sharedInstance];
+    //data.films = nil;
+   // data.ImageData = nil;
+}
 
 - (void)updateCollection
 {

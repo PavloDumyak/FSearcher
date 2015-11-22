@@ -23,6 +23,7 @@
 @property (nonatomic, assign) float vote_average;
 @property (nonatomic, assign) NSInteger voteCount;
 @property (nonatomic, strong) NSData *image;
+@property (nonatomic, assign) BOOL isImageLoad;
 
 @property (nonatomic, strong)NSMutableArray* posterImage;
 

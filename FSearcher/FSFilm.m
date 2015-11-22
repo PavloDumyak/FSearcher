@@ -24,9 +24,9 @@
 
 -(void)parsing:(NSDictionary*)object
 {
-    self.ID = [[object valueForKey:@"id"] integerValue];
-    self.title = [object valueForKey:@"title"];
-    self.overview = [object valueForKey:@"overview"];
+    self.ID =  ![[object valueForKey:@"id"] isKindOfClass:[NSNull class]]? [[object valueForKey:@"id"] integerValue]: 0;
+    self.title =![[object valueForKey:@"title"] isKindOfClass:[NSNull class]] ? [object valueForKey:@"title"] : nil;
+    self.overview = ![[object valueForKey:@"overview"] isKindOfClass:[NSNull class]] ? [object valueForKey:@"overview"] : nil;
     self.adult = [object valueForKey:@"adult"];
     self.originalTitle = [object valueForKey:@"original_title"];
     self.originalLanguge = [object valueForKey:@"original_language"];
@@ -37,13 +37,9 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-dd-mm"];
     self.releaseDate= [dateFormat dateFromString:dateStr];
-    self.posterPath = [object valueForKey:@"poster_path"];
-    if(![self.posterPath isEqual:[NSNull null]])
-    {
-      [FSDownloading downloadImage:self.posterPath :^(NSData *image) {
-          self.image = image;
-    }];
-    }
+    self.posterPath = ![[object valueForKey:@"poster_path"] isKindOfClass:[NSNull class]] ?  [object valueForKey:@"poster_path"] : @"none";
+    self.isImageLoad = NO;
+    
     
 }
 

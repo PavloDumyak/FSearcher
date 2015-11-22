@@ -46,9 +46,9 @@
 
 + (void)getAllImageForCollection: (NSInteger)filmID
 {
-    
-    @autoreleasepool {
+   
         
+    
     [FSDownloading downloadPosterPathes:filmID :^(NSData *json) {
         NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
                                                              options:0
@@ -72,8 +72,9 @@
         }
         
     }];
-        
-   }
+    
+    
+   
 }
 
 

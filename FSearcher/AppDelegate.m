@@ -19,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [FSDataSaver updateData:0 :1];
-    
+   
+[FSDataSaver updateData:0 :1];
     return YES;
 }
 

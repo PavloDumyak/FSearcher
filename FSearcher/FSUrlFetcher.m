@@ -43,7 +43,7 @@
 + (NSURL*)getImage:(NSString *)imagePath
 {
     NSMutableString *base = [NSMutableString stringWithString: IMAGE];
-    if([imagePath isEqual:nil])
+    if(imagePath ==nil)
     {
        [base appendString:@"none"];
     }

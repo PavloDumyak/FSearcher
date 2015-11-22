@@ -22,10 +22,62 @@ static NSInteger cellTag = 0;
     self.dataSaver = [FSDataSaver sharedInstance];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3
                                                       target:self
-                                                    selector:@selector(reloadDATA)
+                                                    selector:@selector(downloadFirstThreeImages2)
                                                     userInfo:nil repeats:YES];
     [timer fire];
 
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(CustomCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.transform = CGAffineTransformMakeScale(0.8, 0.8);
+    [UIView animateWithDuration:0.5 animations:^{
+        cell.transform = CGAffineTransformIdentity;
+    }];
+    
+    FSFilm *film = self.dataSaver.searchingFilms[indexPath.row];
+    
+    if(self.dataSaver.searchingFilms !=nil)
+    {
+        if(film.isImageLoad==NO){
+            film.isImageLoad = YES;
+            
+            [FSDownloading downloadImage:film.posterPath :^(NSData *image) {
+                [film setImage: image];
+                [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                
+            }];
+        }
+    }
+}
+
+
+-(void)downloadFirstThreeImages2
+{
+    
+    if(self.dataSaver.searchingFilms!=nil)
+    {
+        for(NSInteger count = 0;count < 3;count++)
+        {
+            NSIndexPath *myIP = [NSIndexPath indexPathForRow:count inSection:0];
+            FSFilm *film = self.dataSaver.searchingFilms[count];
+            if(film.isImageLoad==NO)
+            {
+                [FSDownloading downloadImage:film.posterPath :^(NSData *image)
+                 {
+                     [film setImage: image];
+                     [self.tableView reloadRowsAtIndexPaths:@[myIP] withRowAnimation:UITableViewRowAnimationNone];
+                 }];
+            }
+        }
+    }
+    
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.dataSaver.searchingFilms = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,14 +90,11 @@ static NSInteger cellTag = 0;
     [FSDataSaver getSearchingData:self.textInput.text];
 }
 
-- (void) reloadDATA
-{
-    [self.tableView reloadData];
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSaver.searchingFilms.count;
+    return 20;//self.dataSaver.searchingFilms.count;
 }
 
 
@@ -63,7 +112,7 @@ static NSInteger cellTag = 0;
     [formatter setDateFormat:@"yyyy"];
     NSString *stringFromDate = [formatter stringFromDate:self.film.releaseDate];
     cell.customDateRelease.text = stringFromDate;
-    if ([self.film.image isEqual:nil])
+    if (self.film.image == nil)
     {
         cell.customImageView.image = [UIImage imageNamed:@"No_Image_Available.png"];
     }
@@ -90,10 +139,11 @@ static NSInteger cellTag = 0;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
     if([segue.identifier isEqualToString:@"ShowDetail"])
     {
         FSFilm *film = self.dataSaver.searchingFilms[cellTag];
-        [FSDataSaver getAllImageForCollection:film.ID];
+        //[FSDataSaver getAllImageForCollection:film.ID];
         FSShowDetailViewController *showDetail = [segue destinationViewController];
         [showDetail setFilmDetail:self.dataSaver.searchingFilms[cellTag]];
     }
@@ -101,14 +151,6 @@ static NSInteger cellTag = 0;
 
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
