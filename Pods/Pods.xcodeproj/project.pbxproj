@@ -10,17 +10,6 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>01193B838328E935ADC3865987090958</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>youtube-ios-player-helper</string>
-			<key>target</key>
-			<string>27654F123DF5D97DBCED7A01C0D13382</string>
-			<key>targetProxy</key>
-			<string>43F07DFD6C2A730EF6B6EFFAD82A9165</string>
-		</dict>
 		<key>03A30F45C5AFFAA10A3AD9009632C58C</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -62,7 +51,7 @@
 			<array/>
 			<key>dependencies</key>
 			<array>
-				<string>01193B838328E935ADC3865987090958</string>
+				<string>CBD3833C8FD672A9F3AFE30A253F75EF</string>
 			</array>
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
@@ -219,7 +208,7 @@
 			<array/>
 			<key>dependencies</key>
 			<array>
-				<string>8FE15C3089E0DBD743B17220848B747D</string>
+				<string>B7ACEFEB6AA40B80A2BDD40633884C0D</string>
 			</array>
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
@@ -318,7 +307,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>43F07DFD6C2A730EF6B6EFFAD82A9165</key>
+		<key>3C0580A54E7DA2EF03E541A50A5F198B</key>
 		<dict>
 			<key>containerPortal</key>
 			<string>D41D8CD98F00B204E9800998ECF8427E</string>
@@ -464,17 +453,6 @@
 			<string>Classes/YTPlayerView.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8FE15C3089E0DBD743B17220848B747D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>youtube-ios-player-helper-Assets</string>
-			<key>target</key>
-			<string>9B33AF09103E6E9B393EB7CD51D98F69</string>
-			<key>targetProxy</key>
-			<string>E5B599C57E12795370FE24DE7AEA961C</string>
 		</dict>
 		<key>9B33AF09103E6E9B393EB7CD51D98F69</key>
 		<dict>
@@ -668,6 +646,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>B7ACEFEB6AA40B80A2BDD40633884C0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>youtube-ios-player-helper-Assets</string>
+			<key>target</key>
+			<string>9B33AF09103E6E9B393EB7CD51D98F69</string>
+			<key>targetProxy</key>
+			<string>FEF9456A1EC8382224E6FFCE034CCC37</string>
+		</dict>
 		<key>B9291F4F28DE362A1C74E6B81B653B00</key>
 		<dict>
 			<key>baseConfigurationReference</key>
@@ -801,6 +790,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>CBD3833C8FD672A9F3AFE30A253F75EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>youtube-ios-player-helper</string>
+			<key>target</key>
+			<string>27654F123DF5D97DBCED7A01C0D13382</string>
+			<key>targetProxy</key>
+			<string>3C0580A54E7DA2EF03E541A50A5F198B</string>
+		</dict>
 		<key>CCA510CFBEA2D207524CDA0D73C3B561</key>
 		<dict>
 			<key>children</key>
@@ -894,19 +894,6 @@
 			<string>PBXHeadersBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-		</dict>
-		<key>E5B599C57E12795370FE24DE7AEA961C</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>9B33AF09103E6E9B393EB7CD51D98F69</string>
-			<key>remoteInfo</key>
-			<string>youtube-ios-player-helper-Assets</string>
 		</dict>
 		<key>E7255EAD3387AA8C4AD27C7DF6ABE6CF</key>
 		<dict>
@@ -1049,6 +1036,19 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>FEF9456A1EC8382224E6FFCE034CCC37</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>9B33AF09103E6E9B393EB7CD51D98F69</string>
+			<key>remoteInfo</key>
+			<string>youtube-ios-player-helper-Assets</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
