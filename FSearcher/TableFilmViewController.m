@@ -186,7 +186,7 @@
 {
    
         FSFilm *film = self.dataSaver.films[[sender tag]];
-       // [FSDataSaver getAllImageForCollection:film.ID];
+        [FSDataSaver getAllImageForCollection:film.ID];
         FSShowDetailViewController *showDetail = [segue destinationViewController];
         [showDetail setFilmDetail:self.dataSaver.films[[sender tag]]];
     

@@ -25,6 +25,17 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
+		<key>0B939722DF1D1A2945EC7012ADFFE9FD</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>youtube-ios-player-helper</string>
+			<key>target</key>
+			<string>27654F123DF5D97DBCED7A01C0D13382</string>
+			<key>targetProxy</key>
+			<string>ED52F6832610090BCA903BBC625411FD</string>
+		</dict>
 		<key>11C615A93FF2B22593AC02AB1BB5EFD4</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -51,7 +62,7 @@
 			<array/>
 			<key>dependencies</key>
 			<array>
-				<string>CBD3833C8FD672A9F3AFE30A253F75EF</string>
+				<string>0B939722DF1D1A2945EC7012ADFFE9FD</string>
 			</array>
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
@@ -165,6 +176,17 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>24470593F6B67E4B39F3CE3E7902EBB5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>youtube-ios-player-helper-Assets</string>
+			<key>target</key>
+			<string>9B33AF09103E6E9B393EB7CD51D98F69</string>
+			<key>targetProxy</key>
+			<string>5AAEB1B42E418DF5C07FF8DE09A76845</string>
+		</dict>
 		<key>25EFDE085B7C6A4099679584D15AFF61</key>
 		<dict>
 			<key>baseConfigurationReference</key>
@@ -208,7 +230,7 @@
 			<array/>
 			<key>dependencies</key>
 			<array>
-				<string>B7ACEFEB6AA40B80A2BDD40633884C0D</string>
+				<string>24470593F6B67E4B39F3CE3E7902EBB5</string>
 			</array>
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
@@ -307,19 +329,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3C0580A54E7DA2EF03E541A50A5F198B</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>27654F123DF5D97DBCED7A01C0D13382</string>
-			<key>remoteInfo</key>
-			<string>youtube-ios-player-helper</string>
-		</dict>
 		<key>5240740979D78B1CCA49097C1E52DB8A</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -345,6 +354,19 @@
 			<string>iOS</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AAEB1B42E418DF5C07FF8DE09A76845</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>9B33AF09103E6E9B393EB7CD51D98F69</string>
+			<key>remoteInfo</key>
+			<string>youtube-ios-player-helper-Assets</string>
 		</dict>
 		<key>6AC9487FD9BB888470F33FE5C9CD19F6</key>
 		<dict>
@@ -646,17 +668,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B7ACEFEB6AA40B80A2BDD40633884C0D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>youtube-ios-player-helper-Assets</string>
-			<key>target</key>
-			<string>9B33AF09103E6E9B393EB7CD51D98F69</string>
-			<key>targetProxy</key>
-			<string>FEF9456A1EC8382224E6FFCE034CCC37</string>
-		</dict>
 		<key>B9291F4F28DE362A1C74E6B81B653B00</key>
 		<dict>
 			<key>baseConfigurationReference</key>
@@ -789,17 +800,6 @@
 			<string>../Target Support Files/youtube-ios-player-helper</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CBD3833C8FD672A9F3AFE30A253F75EF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>youtube-ios-player-helper</string>
-			<key>target</key>
-			<string>27654F123DF5D97DBCED7A01C0D13382</string>
-			<key>targetProxy</key>
-			<string>3C0580A54E7DA2EF03E541A50A5F198B</string>
 		</dict>
 		<key>CCA510CFBEA2D207524CDA0D73C3B561</key>
 		<dict>
@@ -934,6 +934,19 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
+		<key>ED52F6832610090BCA903BBC625411FD</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>27654F123DF5D97DBCED7A01C0D13382</string>
+			<key>remoteInfo</key>
+			<string>youtube-ios-player-helper</string>
+		</dict>
 		<key>F922246EB800BB15CADB53BB7B6849F4</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -1036,19 +1049,6 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
-		</dict>
-		<key>FEF9456A1EC8382224E6FFCE034CCC37</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>9B33AF09103E6E9B393EB7CD51D98F69</string>
-			<key>remoteInfo</key>
-			<string>youtube-ios-player-helper-Assets</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
