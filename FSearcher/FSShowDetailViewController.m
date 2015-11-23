@@ -17,20 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.scroller setScrollEnabled:YES];
-    //[self.scroller setContentSize:CGSizeMake(self.contentView.bounds.size.width, 1200)];
     self.dataSaver = [FSDataSaver sharedInstance];
     [self makeCompleteTitle];
     [self loadSheet];
-    
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCollection) userInfo:nil repeats:YES];
     
-    //self.playerView =  [[YTPlayerView alloc] initWithFrame:self.videoScreen.frame];
-    //[self.playerView loadWithVideoId:@"M7lc1UVf-VE"];
-   // [self.videoScreen addSubview:self.playerView];
-    NSString *code = @"<iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/36db4r3MsgU\" frameborder=\"0\" allowfullscreen></iframe>";
-    [[self video]loadHTMLString:code baseURL:nil];
-
+    NSInteger width = self.video.bounds.size.width;
+    NSInteger height = self.video.bounds.size.height;
     
+    [[self video]loadHTMLString:[FSYouTube getCompleteURLForTrailer:self.filmDetail.trailerID
+                                                                   :height
+                                                                   :width]
+                        baseURL:nil];
 }
 
 
@@ -47,13 +45,6 @@
     self.filmOverview.text = self.filmDetail.overview;
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    
-    FSDataSaver *data = [FSDataSaver sharedInstance];
-    //data.films = nil;
-   // data.ImageData = nil;
-}
 
 - (void)updateCollection
 {

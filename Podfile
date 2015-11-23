@@ -2,7 +2,7 @@
 # platform :ios, '6.0'
 
 target 'FSearcher' do
-pod "youtube-ios-player-helper", "~> 0.1.1"
+pod "VK-ios-sdk" 
 end
 
 target 'FSearcherTests' do

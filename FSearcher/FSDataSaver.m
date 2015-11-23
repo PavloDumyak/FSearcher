@@ -44,11 +44,30 @@
     }];
 }
 
+
++ (void)getTrailers: (NSInteger)filmID
+{
+    
+    [FSDownloading downloadTrailers:filmID :^(NSData *json) {
+        
+        NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
+                                                             options:0
+                                                               error:nil];
+        
+        NSLog(@"%@",[[JSON valueForKey:@"results"] valueForKey:@"key"]);
+        NSArray *trailersID =  [[JSON valueForKey:@"results"] valueForKey:@"key"];
+        FSDataSaver *dataSaver  = [FSDataSaver sharedInstance];
+        dataSaver.trailersID = trailersID[0];
+    }];
+    
+    
+    
+    
+}
+
 + (void)getAllImageForCollection: (NSInteger)filmID
 {
    
-        
-    
     [FSDownloading downloadPosterPathes:filmID :^(NSData *json) {
         NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
                                                              options:0

@@ -26,7 +26,7 @@
 @property (nonatomic, assign) BOOL isImageLoad;
 
 @property (nonatomic, strong)NSMutableArray* posterImage;
-
+@property (nonatomic, strong) NSString *trailerID;
 -(FSFilm*)init:(NSDictionary*)object;
 -(void)parsing:(NSDictionary*)object;
 @end

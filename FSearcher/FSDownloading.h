@@ -14,4 +14,5 @@
 + (void)downloadImage:(NSString *)imagePath :(void (^)(NSData* image))onCompletition;
 + (void)downloadPosterPathes:(NSInteger)filmID  :(void (^)(NSData* json))onCompletition;
 + (void)downloadSearchingInformation:(NSString*)query :(void (^)(NSData* json))onCompletition;
++ (void)downloadTrailers: (NSInteger)trailersId :(void (^)(NSData* json))onCompletition;
 @end

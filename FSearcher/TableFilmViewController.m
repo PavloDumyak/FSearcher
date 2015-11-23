@@ -50,7 +50,20 @@
 
             if(film.isImageLoad==NO){
                 film.isImageLoad = YES;
-                
+                [FSDownloading downloadTrailers:film.ID :^(NSData *json) {
+                    
+                    NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
+                                                                         options:0
+                                                                           error:nil];
+                    
+                    NSArray *trailersID =  [[JSON valueForKey:@"results"] valueForKey:@"key"];
+                    if([trailersID count]>0)
+                    {
+                        film.trailerID = trailersID[0];
+                    }
+                    
+                }];
+
                 [FSDownloading downloadImage:film.posterPath :^(NSData *image) {
                     [film setImage: image];
                     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
@@ -72,6 +85,21 @@
            FSFilm *film = self.dataSaver.films[count];
            if(film.isImageLoad==NO)
                {
+                   [FSDownloading downloadTrailers:film.ID :^(NSData *json) {
+                       
+                       NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
+                                                                            options:0
+                                                                              error:nil];
+                       
+                       NSLog(@"%@",[[JSON valueForKey:@"results"] valueForKey:@"key"]);
+                       NSArray *trailersID =  [[JSON valueForKey:@"results"] valueForKey:@"key"];
+                       if([trailersID count]>0)
+                       {
+                       film.trailerID = trailersID[0];
+                       }
+                       
+                   }];
+                   
                   [FSDownloading downloadImage:film.posterPath :^(NSData *image)
                   {
                      [film setImage: image];
@@ -172,7 +200,6 @@
 
 
 
-
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     if([identifier isEqualToString:@"ShowDetail"])
@@ -184,7 +211,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-   
         FSFilm *film = self.dataSaver.films[[sender tag]];
         [FSDataSaver getAllImageForCollection:film.ID];
         FSShowDetailViewController *showDetail = [segue destinationViewController];

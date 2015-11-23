@@ -12,11 +12,13 @@
 #import "CustomCell.h"
 #import "FSFilm.h"
 #import "FSShowDetailViewController.h"
+#import "FSYouTube.h"
 @interface SearchController : UIViewController<SWRevealViewControllerDelegate, UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textInput;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
 @property (nonatomic, strong) FSDataSaver* dataSaver;
 @property (nonatomic, strong) FSFilm *film;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end

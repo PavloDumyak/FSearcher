@@ -18,8 +18,12 @@
 @property (nonatomic, assign) NSInteger totalPages;
 @property (nonatomic, strong) NSArray *allPostersPath;
 @property (nonatomic, strong) NSArray *ImageData;
+
+@property (nonatomic, strong) NSString *trailersID;
+
 + (instancetype)sharedInstance;
 + (void)updateData:(NSInteger)type :(NSInteger)page;
 + (void)getAllImageForCollection: (NSInteger)filmID;
 + (void)getSearchingData:(NSString*)query;
++ (void)getTrailers: (NSInteger)filmID;
 @end

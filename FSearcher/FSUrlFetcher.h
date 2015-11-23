@@ -15,5 +15,6 @@
 + (NSURL*)getImage:(NSString*)imagePath;
 + (NSURL*)getImagesPath:(NSInteger)filmID;
 + (NSURL*)searchingURL:(NSString*)query;
++ (NSURL*)getTrailersUrl:(NSInteger)trailersId;
 
 @end

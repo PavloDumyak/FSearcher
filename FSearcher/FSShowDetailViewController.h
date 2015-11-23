@@ -11,6 +11,7 @@
 #import "CustomCollectionViewCell.h"
 #import "FSDataSaver.h"
 #import "ShowPhotoViewController.h"
+#import "FSYouTube.h"
 
 
 @interface FSShowDetailViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>

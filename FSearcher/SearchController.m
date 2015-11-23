@@ -20,11 +20,11 @@ static NSInteger cellTag = 0;
     self.revealViewController.delegate=self;
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     self.dataSaver = [FSDataSaver sharedInstance];
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3
                                                       target:self
                                                     selector:@selector(downloadFirstThreeImages2)
                                                     userInfo:nil repeats:YES];
-    [timer fire];
+    [self.timer fire];
 
 }
 
@@ -41,7 +41,19 @@ static NSInteger cellTag = 0;
     {
         if(film.isImageLoad==NO){
             film.isImageLoad = YES;
-            
+            [FSDownloading downloadTrailers:film.ID :^(NSData *json) {
+                
+                NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
+                                                                     options:0
+                                                                       error:nil];
+                NSArray *trailersID =  [[JSON valueForKey:@"results"] valueForKey:@"key"];
+                if([trailersID count]>0)
+                {
+                    film.trailerID = trailersID[0];
+                }
+                
+            }];
+
             [FSDownloading downloadImage:film.posterPath :^(NSData *image) {
                 [film setImage: image];
                 [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
@@ -63,6 +75,18 @@ static NSInteger cellTag = 0;
             FSFilm *film = self.dataSaver.searchingFilms[count];
             if(film.isImageLoad==NO)
             {
+                [FSDownloading downloadTrailers:film.ID :^(NSData *json) {
+                    
+                    NSDictionary* JSON = [NSJSONSerialization JSONObjectWithData:json
+                                                                         options:0
+                                                                           error:nil];
+                    NSArray *trailersID =  [[JSON valueForKey:@"results"] valueForKey:@"key"];
+                    if([trailersID count]>0)
+                    {
+                        film.trailerID = trailersID[0];
+                    }
+                }];
+
                 [FSDownloading downloadImage:film.posterPath :^(NSData *image)
                  {
                      [film setImage: image];
@@ -70,6 +94,7 @@ static NSInteger cellTag = 0;
                  }];
             }
         }
+        
     }
     
 }

@@ -33,4 +33,8 @@
 
 #define SEARCH_PATH_BEGIN @"3/search/movie?query="
 
+
+//http:
+//api.themoviedb.org/3/movie/666/videos?api_key=47bee5b57fa5d8d57c9027a0bc5b7204
+#define VIDEOS @"/videos" 
 #endif

@@ -79,6 +79,17 @@
     
 }
 
++ (NSURL*)getTrailersUrl:(NSInteger)trailersId
+{
+    NSMutableString *base = [NSMutableString stringWithString: SITE_ADDRESS];
+    [base appendString:GET_IMAGE_PATH];
+    [base appendString:[NSString stringWithFormat:@"%ld",trailersId]];
+    [base appendString:VIDEOS];
+    [base appendString:API_KEY_FOR_IM];
+    NSURL *myURL = [[NSURL alloc] initWithString:base];
+    return myURL;
+}
+
 
 
 @end
