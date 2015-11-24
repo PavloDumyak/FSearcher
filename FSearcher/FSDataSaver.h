@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) NSString *trailersID;
 
+@property (nonatomic, strong) NSArray *musicList;
 + (instancetype)sharedInstance;
 + (void)updateData:(NSInteger)type :(NSInteger)page;
 + (void)getAllImageForCollection: (NSInteger)filmID;

@@ -21,6 +21,10 @@
 		6D21B2F61BF620BB0004B2B5 /* FSUrlFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */; };
 		848212091BF662D5002E8A75 /* No_Image_Available.png in Resources */ = {isa = PBXBuildFile; fileRef = 848212081BF662D5002E8A75 /* No_Image_Available.png */; };
 		8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8482125B1BF6A65D002E8A75 /* CustomCell.m */; };
+		849AD9F71C03C5A700AA51EA /* FSMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AD9F61C03C5A700AA51EA /* FSMusicViewController.m */; };
+		849AD9FB1C03CDFC00AA51EA /* FSMusicDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AD9FA1C03CDFC00AA51EA /* FSMusicDownloader.m */; };
+		849AD9FE1C03D5B800AA51EA /* FSMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AD9FD1C03D5B800AA51EA /* FSMusicPlayer.m */; };
+		849ADA011C03DE6500AA51EA /* CustomCellMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 849ADA001C03DE6500AA51EA /* CustomCellMusicPlayer.m */; };
 		84E761D61C031D18002A141E /* FSYouTube.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E761D51C031D18002A141E /* FSYouTube.m */; };
 		84F0DF2B1BF8D27000A9249E /* FSShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DF2A1BF8D27000A9249E /* FSShowDetailViewController.m */; };
 		84F0DF2E1BF8F22D00A9249E /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0DF2D1BF8F22D00A9249E /* CustomCollectionViewCell.m */; };
@@ -69,6 +73,14 @@
 		848212081BF662D5002E8A75 /* No_Image_Available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = No_Image_Available.png; sourceTree = "<group>"; };
 		8482125A1BF6A65D002E8A75 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		8482125B1BF6A65D002E8A75 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		849AD9F51C03C5A700AA51EA /* FSMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMusicViewController.h; sourceTree = "<group>"; };
+		849AD9F61C03C5A700AA51EA /* FSMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMusicViewController.m; sourceTree = "<group>"; };
+		849AD9F91C03CDFC00AA51EA /* FSMusicDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMusicDownloader.h; sourceTree = "<group>"; };
+		849AD9FA1C03CDFC00AA51EA /* FSMusicDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMusicDownloader.m; sourceTree = "<group>"; };
+		849AD9FC1C03D5B800AA51EA /* FSMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMusicPlayer.h; sourceTree = "<group>"; };
+		849AD9FD1C03D5B800AA51EA /* FSMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMusicPlayer.m; sourceTree = "<group>"; };
+		849AD9FF1C03DE6500AA51EA /* CustomCellMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellMusicPlayer.h; sourceTree = "<group>"; };
+		849ADA001C03DE6500AA51EA /* CustomCellMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellMusicPlayer.m; sourceTree = "<group>"; };
 		84E761D41C031D18002A141E /* FSYouTube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSYouTube.h; sourceTree = "<group>"; };
 		84E761D51C031D18002A141E /* FSYouTube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSYouTube.m; sourceTree = "<group>"; };
 		84F0DF291BF8D27000A9249E /* FSShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShowDetailViewController.h; sourceTree = "<group>"; };
@@ -181,6 +193,7 @@
 		6D21B2E01BF5FDC60004B2B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				849AD9F81C03CDBF00AA51EA /* FSAudioPlayer */,
 				84E761D71C031D20002A141E /* FSYouTube */,
 				6D21B2F31BF6209D0004B2B5 /* FSUrlFetcher */,
 				6D21B2EF1BF618700004B2B5 /* FSDataSaver */,
@@ -193,6 +206,7 @@
 		6D21B2E21BF5FDFC0004B2B5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				849AD9BF1C03AB0600AA51EA /* MusicController */,
 				84F0DFB61BF974B000A9249E /* SearchController */,
 				84F0DFB41BF96F5A00A9249E /* SWRevealViewController */,
 				84F0DFB51BF96F7800A9249E /* MenuController */,
@@ -237,6 +251,28 @@
 				6D21B2F51BF620BB0004B2B5 /* FSUrlFetcher.m */,
 			);
 			name = FSUrlFetcher;
+			sourceTree = "<group>";
+		};
+		849AD9BF1C03AB0600AA51EA /* MusicController */ = {
+			isa = PBXGroup;
+			children = (
+				849AD9F51C03C5A700AA51EA /* FSMusicViewController.h */,
+				849AD9F61C03C5A700AA51EA /* FSMusicViewController.m */,
+				849AD9FF1C03DE6500AA51EA /* CustomCellMusicPlayer.h */,
+				849ADA001C03DE6500AA51EA /* CustomCellMusicPlayer.m */,
+			);
+			name = MusicController;
+			sourceTree = "<group>";
+		};
+		849AD9F81C03CDBF00AA51EA /* FSAudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				849AD9F91C03CDFC00AA51EA /* FSMusicDownloader.h */,
+				849AD9FA1C03CDFC00AA51EA /* FSMusicDownloader.m */,
+				849AD9FC1C03D5B800AA51EA /* FSMusicPlayer.h */,
+				849AD9FD1C03D5B800AA51EA /* FSMusicPlayer.m */,
+			);
+			name = FSAudioPlayer;
 			sourceTree = "<group>";
 		};
 		84E761D71C031D20002A141E /* FSYouTube */ = {
@@ -448,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D21B2F61BF620BB0004B2B5 /* FSUrlFetcher.m in Sources */,
+				849AD9F71C03C5A700AA51EA /* FSMusicViewController.m in Sources */,
 				84F0DF2B1BF8D27000A9249E /* FSShowDetailViewController.m in Sources */,
 				6D21B2E91BF608A60004B2B5 /* FSFilm.m in Sources */,
 				8482125C1BF6A65D002E8A75 /* CustomCell.m in Sources */,
@@ -455,14 +492,17 @@
 				6D21B2ED1BF608D70004B2B5 /* FSDownloading.m in Sources */,
 				6D21B2E51BF5FE7B0004B2B5 /* TableFilmViewController.m in Sources */,
 				84F0DF311BF90CFE00A9249E /* ShowPhotoViewController.m in Sources */,
+				849AD9FB1C03CDFC00AA51EA /* FSMusicDownloader.m in Sources */,
 				6D21B2F21BF618860004B2B5 /* FSDataSaver.m in Sources */,
 				84E761D61C031D18002A141E /* FSYouTube.m in Sources */,
+				849AD9FE1C03D5B800AA51EA /* FSMusicPlayer.m in Sources */,
 				84F0DFB91BF974DB00A9249E /* SearchController.m in Sources */,
 				6D21B2BD1BF5FD880004B2B5 /* main.m in Sources */,
 				84F0DFAD1BF94D1800A9249E /* RootViewController.m in Sources */,
 				84F0DF2E1BF8F22D00A9249E /* CustomCollectionViewCell.m in Sources */,
 				84F0DFB31BF962D000A9249E /* MenuTableViewController.m in Sources */,
 				84F0DFAA1BF94C7900A9249E /* SWRevealViewController.m in Sources */,
+				849ADA011C03DE6500AA51EA /* CustomCellMusicPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

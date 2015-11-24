@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D9D9867154B547B57C15619"
-               BuildableName = "libPods-FSearcher.a"
-               BlueprintName = "Pods-FSearcher"
+               BlueprintIdentifier = "992EA7B867747E737E37A49B"
+               BuildableName = "libVK-ios-sdk.a"
+               BlueprintName = "VK-ios-sdk"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

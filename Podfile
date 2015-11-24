@@ -2,7 +2,8 @@
 # platform :ios, '6.0'
 
 target 'FSearcher' do
-pod "VK-ios-sdk" 
+    
+    pod 'VK-ios-sdk',  '~> 1.2.2'
 end
 
 target 'FSearcherTests' do
